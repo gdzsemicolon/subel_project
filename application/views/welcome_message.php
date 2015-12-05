@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>Subel Turizm Sanayi ve Ticaret Limited Şirketi</title>       
                     
-                    <link href="<?= base_url();?>application/views/css/style.css" rel="stylesheet" type="text/css" />
+                    <link href="http://subel.com.tr/images/style.css" rel="stylesheet" type="text/css" />
                 
                     </head>
 
@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="clearfix">
 			<div class="logo">
                             
-				<a><img src="<?= base_url();?>application/views/images/logo.png" alt="LOGO" height="52" width="140"></a>
+				<a><img src="http://subel.com.tr/images/logo.png" alt="LOGO" height="52" width="140"></a>
 			                  <strong><small><b>Subel Turizm Sanayi ve Ticaret Limited Şirketi</b></small></strong>
                         </div>
 			<ul class="navigation">
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="contents">
 		<div id="x">
 			<div class="clearfix">
-				<img src="<?= base_url();?>application/views/images/1a.jpg" alt="Img" height="300" width="950">
+				<img src="http://subel.com.tr/images/1a.jpg" alt="Img" height="300" width="950">
 			</div>
 		</div>
 		<div class="highlight">
@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<li>
 					<div class="frame1">
 						<div class="box">
-							<img src="<?= base_url();?>application/views/images/pr1.jpg" alt="Img" height="130" width="197">
+							<img src="http://subel.com.tr/images/pr1.jpg" alt="Img" height="130" width="197">
 						</div>
 					</div>
 					<p>
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<li>
 					<div class="frame1">
 						<div class="box">
-							<img src="<?= base_url();?>application/views/images/pr2.jpg" alt="Img" height="130" width="197">
+							<img src="http://subel.com.tr/images/pr2.jpg" alt="Img" height="130" width="197">
 						</div>
 					</div>
 					<p>
@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<li>
 					<div class="frame1">
 						<div class="box">
-							<img src="<?= base_url();?>application/views/images/pr3.jpg" alt="Img" height="130" width="197">
+							<img src="http://subel.com.tr/images/pr3.jpg" alt="Img" height="130" width="197">
 						</div>
 					</div>
 					<p>
@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<li>
 					<div class="frame1">
 						<div class="box">
-							<img src="<?= base_url();?>application/views/images/pr4.jpg" alt="Img" height="130" width="197">
+							<img src="http://subel.com.tr/images/pr4.jpg" alt="Img" height="130" width="197">
 						</div>
 					</div>
 					<p>
