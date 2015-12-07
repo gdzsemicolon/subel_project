@@ -123,7 +123,7 @@ img {
 }
 /*------------ HEADER ------------*/
 #header {
-	background: #4e5944 url(../images/bg-header.jpg) repeat-x left bottom;
+	background: #37749A url(../images/bg-header.jpg) repeat-x left bottom;
 	padding: 40px 0 46px;
 }
 /** logo **/
@@ -144,7 +144,7 @@ img {
 	position: relative;
 }
 .navigation li > a {
-	color: #b8c6ac;
+	color: #E1E6EA;
 	font: bold 13px/24px Times, "Times New Roman", serif;
 	text-decoration: none;
 	text-shadow: 1px 1px #000;
