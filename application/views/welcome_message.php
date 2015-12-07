@@ -22,13 +22,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 			<ul class="navigation">
 				<li class="active">
-					<a href="index.html">Anasayfa</a>
+					<a href="index.php">Anasayfa</a>
 				</li>
 				<li>
-					<a href="about.html">Hakkında</a>
+                                                                                 <a href="application/views/hakkimizda.html">Hakkında</a>
 				</li>
 				<li>
-					<a href="ourworks.html">Çalışmalarımız</a>
+					<a href="application/views/ourwork.html">Çalışmalarımız</a>
 				</li>
 				<li>
 					<a href="contact.html">İlETİŞİM</a>
