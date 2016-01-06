@@ -18,6 +18,7 @@
  * @author Semi Colon Team
  */
 namespace Controllers;
+
 class Site extends CI_Controller
 {
 
@@ -351,6 +352,66 @@ class Site extends CI_Controller
             $message = "Lütfen Bilgilerinizi Kontrol Ediniz.";
             echo "<script type='text/javascript'>alert('$message');</script>";
         }
+    }
+    /**
+     *Search User.
+     *
+     *@return void
+     */
+    public function searchUser()
+    {
+        $this->load->model('model_users');
+        $search = $this->input->post('search');
+        $select = $this->input->post('sel1');
+        if (isset($search) and ! empty($search)) {
+            $data['form'] = $this->model_users->search_user($search, $select);
+            $data['links'] = '';
+            $this->load->view('admin', $data);
+        } else {
+            redirect('site/admin');
+        }
+    }
+    /**
+     *Get Edit page with ID.
+     *
+     *@return void
+     */
+    public function edit($id)
+    {
+        $this->load->model('model_users');
+        $data['get_edit'] = $this->model_users->get_edit($id);
+        $this->load->view('edit_user', $data);
+    }
+    /**
+     *Edit user with ID.
+     *
+     *@return void
+     */
+    public function editUser()
+    {
+        $id = $this->input->post('id');
+        $this->load->model('model_users');
+        $result = $this->model_users->updateUser($id);
+        if ($result) {
+            $config = array();
+            $config['total_rows'] = $this->model_users->count_user();
+            $config['per_page'] = 10;
+            $page = $this->uri->segment(3);
+            $data['form'] = $this->model_users->fetch_user($config['per_page'], $page);
+            $this->load->view('admin', $data);
+        } else {
+            echo "error";
+        }
+    }
+    /**
+     *Delete User.
+     *
+     *@return void
+     */
+    public function delete($id)
+    {
+        $this->load->model('model_users');
+        $this->model_users->delete($id);
     }
 }
 

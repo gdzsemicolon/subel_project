@@ -16,6 +16,7 @@
  * @subpackage Controllers
  */
  namespace Controllers;
+
 class Profile extends CI_Controller
 {
 
@@ -176,5 +177,3 @@ class Profile extends CI_Controller
         }
     }
 }//end class.
-
-

@@ -153,5 +153,88 @@ class Model_users extends CI_Model
             return false;
         }
     }
+	/**
+     * Count users to fill table pages.
+     * @return count number.
+     */
+	 
+	public function count_user(){
+        return $this->db->count_all('form');
+    }	
+	/**
+     * Fetch user.
+     * @return query result.
+     */
+    public function fetchUser($limit,$offset){
+        $this->db->limit($limit,$offset);
+        $query = $this->db->get('form');
+        if($query->num_rows() > 0){
+            return $query->result();
+        }else{
+            return $query->result();
+        }
+    }
+    /**
+     * Search user with selection criteria.
+     * @return query result.
+     */
+    public function searchUser($search,$select){
+        $this->db->select('*');
+        $this->db->from('form');
+        $this->db->like($select,$search);
+        $query = $this->db->get();
+        if($query->num_rows() > 0){
+            return $query->result();
+        }else {
+            return $query->result();
+        }
+        
+    }
+    /**
+     * Get edit user with ID.
+     * @return row values.
+     */
+    public function getEdit($id){
+        $query = $this->db->get_where('form', array('id' => $id));
+        return $query->row();
+    }
+    /**
+     * Update user with ID.
+     * @return true|false
+     */
+    public function updateUser($id){            
+        $data = array(
+            'adsoyad' => $this->input->post('name'),
+            'email' => $this->input->post('email'),
+            'yer' => $this->input->post('yer'),
+            'tc' => $this->input->post('tc'),
+            'tel' => $this->input->post('tel'),
+            'evlilik' => $this->input->post('evlilik'),
+            'tahsil' => $this->input->post('tahsil'),
+            'bilgisayar' => $this->input->post('pc'),
+            'dil' => $this->input->post('dil')
+        );
+        $this->db->where('id',$id);
+        $query = $this->db->update('form',$data);
+        if($query){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    /**
+     * Delete user with ID.
+     * @return true|false
+     */
+    public function delete($id)
+    {
+        $this->db->where('id',$id);
+        $this->db->delete('form');
+        if($this->db->affected_rows()>0)
+        {
+            redirect('site/admin');
+        }
+        
+    }
 }
 //end class
