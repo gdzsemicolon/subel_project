@@ -1,4 +1,4 @@
-# subel_project
-Gediz University Fall 2015
+# GedizJira
+Gediz University 2016
 
-Software Engineering Class Project by Group Semi COLON
+Software Engineering Managament
